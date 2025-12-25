@@ -1,0 +1,352 @@
+/* Wedding Dashboard Styles */
+.wedding-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0e6ea;
+}
+
+.header-content h1 {
+  font-size: 2.2rem;
+  color: #ad1457;
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.header-content h1 i {
+  color: #e91e63;
+  margin-right: 10px;
+}
+
+.header-content p {
+  color: #757575;
+  font-size: 1rem;
+}
+
+.add-booking-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(to right, #ad1457, #e91e63);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+}
+
+.add-booking-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(233, 30, 99, 0.4);
+  color: white;
+}
+
+.add-booking-btn i {
+  font-size: 1.1rem;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #e91e63;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  color: #757575;
+  font-size: 1rem;
+}
+
+/* Empty State */
+.no-bookings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  text-align: center;
+  background-color: #fafafa;
+  border-radius: 10px;
+  border: 1px dashed #e0e0e0;
+}
+
+.no-bookings i {
+  font-size: 3rem;
+  color: #bdbdbd;
+  margin-bottom: 20px;
+}
+
+.no-bookings h3 {
+  font-size: 1.5rem;
+  color: #616161;
+  margin-bottom: 10px;
+}
+
+.no-bookings p {
+  color: #9e9e9e;
+  margin-bottom: 25px;
+}
+
+.add-first-booking-btn {
+  background-color: #e91e63;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-first-booking-btn:hover {
+  background-color: #c2185b;
+  color: white;
+}
+
+/* Bookings Container */
+.bookings-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+/* Booking Card */
+.booking-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #f5f5f5;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.service-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.badge-elegant {
+  background: linear-gradient(to right, #9c27b0, #ba68c8);
+}
+
+.badge-royal {
+  background: linear-gradient(to right, #1976d2, #64b5f6);
+}
+
+.badge-intimate {
+  background: linear-gradient(to right, #388e3c, #81c784);
+}
+
+.badge-destination {
+  background: linear-gradient(to right, #f57c00, #ffb74d);
+}
+
+.badge-custom {
+  background: linear-gradient(to right, #7b1fa2, #ce93d8);
+}
+
+.badge-default {
+  background: linear-gradient(to right, #757575, #bdbdbd);
+}
+
+.booking-number {
+  font-size: 0.9rem;
+  color: #9e9e9e;
+  font-weight: 600;
+}
+
+.booking-body {
+  padding: 20px;
+}
+
+.booking-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.info-item i {
+  color: #e91e63;
+  font-size: 1.1rem;
+  margin-top: 4px;
+}
+
+.info-item h4 {
+  font-size: 0.8rem;
+  color: #9e9e9e;
+  margin: 0 0 5px 0;
+  font-weight: 500;
+}
+
+.info-item p {
+  font-size: 0.95rem;
+  color: #424242;
+  margin: 0;
+  word-break: break-word;
+}
+
+.date-item {
+  grid-column: span 2;
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 1px dashed #f0f0f0;
+}
+
+.wedding-date {
+  color: #ad1457 !important;
+  font-weight: 600;
+}
+
+.booking-actions {
+  display: flex;
+  border-top: 1px solid #f0f0f0;
+}
+
+.edit-btn, .delete-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.edit-btn {
+  color: #1976d2;
+  border-right: 1px solid #f0f0f0;
+}
+
+.delete-btn {
+  color: #e53935;
+}
+
+.edit-btn:hover {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.delete-btn:hover {
+  background-color: #ffebee;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .add-booking-btn {
+    align-self: flex-start;
+  }
+  
+  .bookings-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .date-item {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .booking-card {
+    border-radius: 8px;
+  }
+}
+
+/* WhatsApp Button Styles */
+.whatsapp-btn {
+  background-color: #25D366; /* WhatsApp green color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E; /* Darker shade for hover effect */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.whatsapp-btn:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+.whatsapp-btn i {
+  font-size: 1.2rem; /* Icon size */
+}
